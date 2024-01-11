@@ -1,0 +1,50 @@
+{
+  "action": {
+    "default_icon": "icon-34.png"
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "chrome_url_overrides": {},
+  "content_scripts": [
+    {
+      "css": ["content.styles.css"],
+      "js": ["contentScript.bundle.js", "myCustom.js"],
+      "matches": ["*://*.whatsapp.com/*"]
+    }
+  ],
+  "description": "CRM para WhatsApp.",
+  "host_permissions": ["*://*.whatsapp.com/*"],
+  "icons": {
+    "128": "icon-128.png",
+    "16": "icon-16.png",
+    "48": "icon-48.png"
+  },
+  // "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3hNdDHC3YbSHrouEf2/kTHCTPcMuiA4EGLLvkYIfzfkWCIp/Ltuth9c/KueX0FjONDlJgT9hQ59iIiA1biHazfVjZ9964az0JlvPK5wQyfEh7WpMVsxRaQydwWoMQTi2mX29iO47hQb4lPQOS0Ip9/sXm7O/g4niEPsfVMJGc+Xvsi1T/cBMpcqTYJl3pr8y2zrKiLlSLTzGHgTBMd1mRK4LnrC1RSdyNtUfMw28MYFrSP49zQ+TZEy2/63aA8QoWfz+L0UJlEMAtwffJnAkyI75TK1XsiGEXC99C2QgoFI+IO29+4S7XdqFRLGsm5VocqmSksOdu0WOg/kxrhNDwIDAQAB",
+  "manifest_version": 3,
+  "name": " ",
+  "permissions": ["tabs", "storage", "unlimitedStorage", "notifications"],
+  "short_name": "CRM WhatsApp",
+  // "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "2.0.4",
+  // "homepage_url": "https://chrome.google.com/webstore/detail/your-extension-id",
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*.whatsapp.com/*"],
+      "resources": [
+        "icon-128.png",
+        "icon-48.png",
+        "icon-16.png",
+        "icon-34.png",
+        "images/*",
+        "content.styles.css",
+        "inject.styles.css",
+        "injectScript.bundle.js",
+        "contact_upload.csv",
+        "contact_upload.xlsx",
+        "imported_js.js",
+        "imported_css.css"
+      ]
+    }
+  ]
+}
